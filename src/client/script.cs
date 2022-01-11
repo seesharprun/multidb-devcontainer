@@ -9,6 +9,10 @@ AzureStorageSource storageSource = new("DefaultEndpointsProtocol=http;AccountNam
 var storageTables = await storageSource.GetTableNamesAsync();
 PrintResults("Azure Storage Tables", storageTables);
 
+SqlSource sqlSource = new("Data Source=sql,1433;User ID=sa;Password=Passw0rd;");
+var sqlDatabases = await sqlSource.GetDatabaseNamesAsync();
+PrintResults("SQL", sqlDatabases);
+
 MongoSource mongoSource = new("mongodb://mongo:27017");
 var mongoDatabases = await mongoSource.GetDatabaseNamesAsync();
 PrintResults("Mongo DB", mongoDatabases);
