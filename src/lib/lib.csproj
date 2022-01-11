@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>Workspace.Library</RootNamespace>
+    <AssemblyName>Workspace.Library</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>  
+    <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.7.2.8" />  
+    <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.23.0" /> 
+    <PackageReference Include="Microsoft.Azure.Cosmos.Table" Version="1.0.8" />  
+    <PackageReference Include="MongoDB.Driver" Version="2.14.1" />
+  </ItemGroup>
+</Project>

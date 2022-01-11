@@ -4,15 +4,25 @@ services:
     image: mcr.microsoft.com/dotnet/sdk:6.0
     command: sleep infinity
     volumes:
-      - ..:/workspace:cached
+      - ..:/workspace
     depends_on:
-      - mongo
+      - azurecosmosdb
+      - azurestorage
       - dynamodb
-  mongo:
-    image: mongo
+      - mongo
+  azurecosmosdb:
+    image: mcr.microsoft.com/cosmosdb/linux/azure-cosmos-emulator
     ports:
-     - 27017:27017
+      - 8081:8081
+  azurestorage:
+    image: mcr.microsoft.com/azure-storage/azurite
+    ports:
+      - 10002:10002
   dynamodb:
     image: amazon/dynamodb-local
     ports:
-     - 8000:8000
+      - 8000:8000
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017

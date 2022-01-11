@@ -4,9 +4,10 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <AssemblyName>Workspace.Client</AssemblyName>
+    <RootNamespace>Workspace.Client</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.7.2.8" />
-    <PackageReference Include="MongoDB.Driver" Version="2.14.1" />
+    <ProjectReference Include="..\lib\lib.csproj" />
   </ItemGroup>
 </Project>
