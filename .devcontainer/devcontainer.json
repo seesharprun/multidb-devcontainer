@@ -1,0 +1,9 @@
+{
+	"name": "Demo .NET 6 Tests",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "devenv",
+	"workspaceFolder": "/workspace",
+	"extensions": [
+		"ms-dotnettools.csharp"
+	]
+}
